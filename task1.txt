@@ -1,0 +1,88 @@
+nmap 0.0.0.0/24 -sS (with SYN-ACK)
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-10-20 15:49 IST
+Nmap scan report for reliance.reliance (0.0.0.0)
+Host is up (0.026s latency).
+Not shown: 990 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+22/tcp   closed ssh
+53/tcp   open   domain
+80/tcp   open   http
+443/tcp  open   https
+1900/tcp open   upnp
+2869/tcp closed icslap
+7443/tcp open   oracleas-https
+8080/tcp open   http-proxy
+8200/tcp closed trivnet1
+8443/tcp open   https-alt
+
+Nmap scan report for 0.0.0.0
+Host is up (0.0000010s latency).
+All 1000 scanned ports on 0.0.0.0 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+
+Nmap done: 256 IP addresses (2 hosts up) scanned in 6.57 seconds
+                                                                        
+nmap 0.0.0.0/24 (normal)
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-10-20 15:50 IST
+Nmap scan report for reliance.reliance (0.0.0.0)
+Host is up (0.027s latency).
+Not shown: 994 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+443/tcp  open   https
+1900/tcp open   upnp
+2869/tcp closed icslap
+7443/tcp open   oracleas-https
+8200/tcp closed trivnet1
+8443/tcp open   https-alt
+
+
+Nmap scan report for 0.0.0.0
+Host is up (0.0000010s latency).
+All 1000 scanned ports on 0.0.0.0 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+
+Nmap done: 256 IP addresses (2 hosts up) scanned in 39.78 seconds
+
+
+
+INTERVIEW QUESTIONS
+
+
+
+Q1. what is an open port?
+Ans.open port is a network port that is configured to accept incoming connections from remote devices.portss are numbersed from 0 to 65535 where 0-1024 are well-knowned and mostley used ports
+
+
+Q2. How does Nmap perform a TCP SYN scan?
+Ans. firstly it send syn packet(request to start connection) then if the target is replied with SYN-ACK that mran the port is open and is replied wirh RST that means port is closed
+
+
+Q3.What risks are associated with open ports?
+Ans.open ports can be entry point for attracker to attack is not secured 
+
+
+Q4.explain differce between TCP and UDP scanning?
+Ans. TCP is connection-oriented protocol and it is faster and more reliable and it use SYN/ACK packets 
+ UDP is connectionless protocol and is slower and less relaible and send empty UDP packets
+
+
+Q5.How can open ports be secured?
+Ans. 1.)close unused ports
+    2.)update software regularly
+     3.) monitor logs for unusal port activity
+     
+     
+
+Q6.What is firewall role regarding ports?
+Ans.firewall control network traffic based on security rules.It blocks or allow traffic to specific ports.It prevents unauthorised access to open ports.
+
+Q7.What is a port scan and why do attacker perform it?
+Ans.port scan is a pocess of sending packets to a range of ports on a host to discover which are open,closed,filter.
+Attacker perform port scan to:
+1.)identify running services and potential vulnerabilities.
+2.)determine security measures like firewall ,IDS.
+
+Q8.How does wireshark complement port scanning?
+Ans.Wireshark is a packet analyzer that capture and inspect network traffic in real time.it complement port scanning by :
+1.)verifying nmap result.
+2.)analysis responses to detect filtering or blocking.
